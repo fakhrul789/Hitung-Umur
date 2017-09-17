@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagezodiak"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:id="@+id/txtnama"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hari Lahir"
+        android:id="@+id/txtharilahir"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usia"
+        android:id="@+id/txtusia"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ultah"
+        android:id="@+id/txtultah"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zodiak"
+        android:id="@+id/txtzodiak"/>
+
+</LinearLayout>

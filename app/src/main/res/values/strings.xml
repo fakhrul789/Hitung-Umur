@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hitung Umur</string>
+
+    <string name="base_url">https://script.google.com/macros/</string>
+</resources>

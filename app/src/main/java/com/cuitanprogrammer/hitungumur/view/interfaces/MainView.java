@@ -7,6 +7,5 @@ import com.cuitanprogrammer.hitungumur.model.UmurDiscover;
  */
 
 public interface MainView {
-    void setData(UmurDiscover data);
     void tampilDialog(String nama, String tanggal);
 }

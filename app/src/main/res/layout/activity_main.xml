@@ -8,23 +8,17 @@
     android:padding="10dp"
     tools:context="com.cuitanprogrammer.hitungumur.view.activities.MainActivity">
 
-    <TextView
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nama" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/txtnama"
-        style="@style/MyEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nama" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Tanggal Lahir" />
+        <EditText
+            android:id="@+id/txtnama"
+            style="@style/MyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama" />
+    </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -35,15 +29,15 @@
             style="@style/MyEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="DD/MM/YYYY" />
+            android:hint="DD-MM-YYYY" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/btnsubmit"
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
         android:background="#00ff1e"
-        android:textColor="#fff"
-        android:text="Submit"/>
+        android:text="Submit"
+        android:textColor="#fff" />
 </LinearLayout>

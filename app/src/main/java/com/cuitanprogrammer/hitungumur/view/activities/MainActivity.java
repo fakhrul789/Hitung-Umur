@@ -70,11 +70,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
-    public void setData(UmurDiscover data) {
-
-    }
-
-    @Override
     public void tampilDialog(String nama, String tanggal) {
         UmurDialogFrament dialogFrament = UmurDialogFrament.newInstance(nama,tanggal);
         dialogFrament.show(getSupportFragmentManager(),"dialog");

@@ -1,5 +1,8 @@
 package com.cuitanprogrammer.hitungumur.view.fragments;
 
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -16,12 +19,9 @@ import com.cuitanprogrammer.hitungumur.model.Umur;
 import com.cuitanprogrammer.hitungumur.model.UmurDiscover;
 import com.cuitanprogrammer.hitungumur.rest.ApiClient;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
+import java.io.InputStream;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,6 +37,7 @@ public class UmurDialogFrament extends DialogFragment {
     TextView ultah;
     TextView usia;
     TextView zodiak;
+    AssetManager assetManager;
 
     UmurDiscover data;
 
@@ -58,6 +59,9 @@ public class UmurDialogFrament extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.umur_dialog_fragment, container, false);
+
+        assetManager = HitunUmurApplication.getContext().getAssets();
+
         imageView = (ImageView) view.findViewById(R.id.imagezodiak);
         nama = (TextView) view.findViewById(R.id.txtnama);
         harilahir = (TextView) view.findViewById(R.id.txtharilahir);
@@ -77,8 +81,13 @@ public class UmurDialogFrament extends DialogFragment {
             @Override
             public void onResponse(Call<UmurDiscover> call, Response<UmurDiscover> response) {
                 Umur umur = response.body().getData();
-                int resID = HitunUmurApplication.getContext().getResources().getIdentifier(umur.getZodiak() + ".jpg", "assets", HitunUmurApplication.getContext().getPackageName());
-                imageView.setImageResource(resID);
+                try {
+                    InputStream is = assetManager.open("image/"+umur.getZodiak()+".jpg");
+                    Bitmap bitmap = BitmapFactory.decodeStream(is);
+                    imageView.setImageBitmap(bitmap);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 nama.setText(umur.getNama());
                 harilahir.setText(umur.getLahir());
                 ultah.setText(umur.getUltah());

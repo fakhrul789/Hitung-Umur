@@ -2,53 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
     android:orientation="vertical">
 
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imagezodiak"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imagezodiak"/>
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:textSize="18dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama"
-        android:id="@+id/txtnama"/>
+        android:padding="10dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hari Lahir"
-        android:id="@+id/txtharilahir"/>
+        <TextView
+            android:id="@+id/txtnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Nama"
+            android:textColor="#000"
+            android:textSize="22dp" />
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Usia"
-        android:id="@+id/txtusia"/>
+        <TextView
+            android:id="@+id/txtharilahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Hari Lahir"
+            android:textColor="#000"
+            android:textSize="22dp" />
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ultah"
-        android:id="@+id/txtultah"/>
+        <TextView
+            android:id="@+id/txtusia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Usia"
+            android:textColor="#000"
+            android:textSize="22dp" />
 
-    <TextView
-        android:layout_marginTop="15dp"
-        android:textSize="18dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Zodiak"
-        android:id="@+id/txtzodiak"/>
+        <TextView
+            android:id="@+id/txtultah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Ultah"
+            android:textColor="#000"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/txtzodiak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Zodiak"
+            android:textColor="#000"
+            android:textSize="22dp" />
+    </LinearLayout>
 
 </LinearLayout>
